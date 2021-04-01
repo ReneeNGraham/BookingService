@@ -17,7 +17,7 @@ public class Customer {
     private String name;
     @Column(name="age")
     private int age;
-    @OneToMany
+    @OneToMany(mappedBy="customer")
     @JsonIgnoreProperties({"customers"})
     private List<Booking> bookings;
 
